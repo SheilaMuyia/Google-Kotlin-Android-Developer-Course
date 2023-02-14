@@ -1,0 +1,24 @@
+//Dice Roller Code: My own way before using a method.
+
+fun main() {
+    val dicerange = 6..6
+    val rangedice = dicerange.random()
+    println("Your dice sides number is $rangedice,")
+    println(" ")
+    //instantiate the object of first dice
+    var FirstDice = Dice()
+    
+    println(" Your color is ${FirstDice.dicesides}")
+    println(FirstDice.weight)
+
+}
+class Dice(){
+    val sidesrange = 1..6
+    val dicesides = sidesrange.random()
+    //var sides = 6
+    //var color = " "
+    
+    var weightrange = 1..10
+    var weight = weightrange.random()
+}
+
