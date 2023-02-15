@@ -1,0 +1,52 @@
+//Using a method -Day 2-15/2/2023
+fun main(){
+    //print dicesides
+    //Instatiante Object FirsDice to Class - 
+    //Saying that object first dice uses variables from general class Dice()
+    
+    val FirstDice = Dice()
+    println (FirstDice.dicesides) //Call out specific variable to print ie dicesides, diceweight, etc
+	//calling the method or function in the main
+    //var FirstDice = roll()-Error! Won't roll the dice!
+    //println(FirstDice.rolldice) - Error! Wont roll the dice! Instead
+    FirstDice.roll()
+    //Only that won't work. You have to print out the random number in the method
+	
+}
+//class
+class Dice(){
+    //characteristics - numberof sides and rolls
+    //function 
+    //variable dicesides
+    var dicesides = 6
+    //function/method roll
+    //fun roll { --Oops! Had forgotten the ()
+    fun roll (){
+        
+        var diceroll = 1..12
+        var rolldice = diceroll.random()//random is an inbuilt Kotlin function
+        //We're simply telling the dice to roll any random number from 1 to 12
+       //Alternative: var diceroll = (1..12).random()
+       println(rolldice)
+       
+    }
+    
+}
+
+//Code Summary 
+/*fun main() {
+    val myFirstDice = Dice()
+    println(myFirstDice.sides)
+    myFirstDice.roll()
+}
+
+class Dice {
+    var sides = 6
+
+    fun roll() {
+        val randomNumber = (1..6).random()
+        println(randomNumber)
+    }
+}
+
+*/
