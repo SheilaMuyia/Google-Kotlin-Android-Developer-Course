@@ -32,3 +32,42 @@ class Dice(){
         //var diceroll=(1..12).random()
     }
 }
+
+//.....................................................................................................................................................................//.....................................................................................................................................................................//....
+///Corrected Code 
+//main function
+fun main()
+{
+    //Instantiate first object to class
+    
+   val FirstDice = Dice()
+   println(FirstDice.dicesides)
+   //println(FirstDice.roll()) gave me the error "kotlin.Unit" Let's try again
+   //val a = FirstDice.roll()
+   ///println (a.rolldice)
+   //ANSWER: Error all. Just print FirstDice.roll() and print the rolldice in the method
+   
+   FirstDice.roll()
+  //always call the variable or method otherwise it will print something like "Dice@37f8bb67" as an error
+  //Yay!!It printed the number of sides!
+  
+}
+//class
+class Dice(){
+    //Dice = Has 6 sides, can roll multiple times
+    
+    var dicesides = 6
+    //implementing a function or method to roll dice. 
+    //A method is simply a function called inside a class
+    
+    fun roll(){
+        //Upto 12 times. Therefore, we will use range. 
+        //A range in Kotlin from 1 to 12 is written as "1..12"
+        var diceroll = 1..12
+        var rolldice = diceroll.random()
+        println(rolldice)
+        
+        //However, there's a shorter way of doing this.
+        //var diceroll=(1..12).random()
+    }
+}
