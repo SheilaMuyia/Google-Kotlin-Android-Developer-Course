@@ -1,0 +1,104 @@
+//Here is my code. Let's correct it. 
+//I asked ChatGPT the use of a return statement. Here is what it said:
+ANALOGY: Bakery, Cakes, Recipe
+         Cake = Return value
+         Recipe = Code in the function 
+         Bakery = Function that takes in ingredients and follows a recipe
+         Packaging the Cake = Return Value. Allows the cake to be held by multiple people during transportation. 
+        
+................Me: What's the analogy of the return of a function?.................................................................................................. 
+
+An analogy for the return of a function could be that of a bakery that produces a cake. 
+The function is like the bakery, which takes in ingredients as its input, 
+mixes them together using a recipe (the code inside the function), 
+and produces a final product (the return value). In this analogy, 
+the ingredients are like the arguments passed into the function, 
+the recipe is the code inside the function that processes the inputs, 
+and the final cake is like the return value produced by the function. 
+Just as a bakery can produce different cakes with different recipes, 
+a function can produce different return values based on the inputs and the code inside it.
+
+
+
+..............Me: What's the importance of return? ........................................................................................................................
+
+The return statement in a function is important because it allows the function to send a value back to the code that called it. This value can be used to further process or manipulate the data in the program. Here are some specific reasons why the return statement is important:
+
+Passing data between functions: By using the return statement, a function can pass a value to another function. This allows multiple functions to work together to solve a larger problem.
+
+Checking for success or failure: A function can return a value to indicate whether it was successful or not. This is useful when a function needs to perform a complex task that may fail under certain conditions.
+
+Reducing code duplication: A function can perform a complex operation and return the result, which can be used in multiple places in a program. This reduces the amount of duplicated code and makes the program easier to maintain.
+
+Building complex data structures: Functions can return complex data structures, such as lists or dictionaries, that contain multiple values. This makes it easier to work with data in a program and to pass data between functions.
+
+In summary, the return statement is an essential part of programming that allows functions to communicate with other parts of a program, pass data between functions, and reduce code duplication.
+
+
+.......................................................................................................................................................................................................................................................................................................................................................
+........................................................................................................................................................................
+//Return statement code-Let's correct it
+//return a value to the function 
+fun main(){
+    //instatiante object First Dice to class Dice
+  var FirstDice = Dice() 
+  println(FirstDice.dicesides)
+  
+  FirstDice.roll() //method
+  //println()
+}
+class Dice():int {
+    var dicesides = 6
+    fun roll(){
+        var diceroll = (1..12).random()
+        //println()
+        return diceroll
+    }
+}
+
+//Mistakes 
+//1.Int 
+
+//Correct Code according to Google Kotlin
+fun main() {
+    val myFirstDice = Dice()
+    val diceRoll = myFirstDice.roll()
+    println("Your ${myFirstDice.sides} sided dice rolled ${diceRoll}!")
+}
+
+
+class Dice {
+    var sides = 6
+
+    fun roll(): Int {
+        val randomNumber = (1..6).random()
+        return randomNumber
+    }
+}
+
+.......
+///Our Corrected Code:
+
+//return a value to the function 
+fun main(){
+    //instatiante object First Dice to class Dice
+  var FirstDice = Dice() 
+  println(FirstDice.dicesides)
+  //Everything is correct except for returning a value to the method that called the function.
+  //To return it, we have to declare a variable
+  var rolldice = FirstDice.roll() //method
+  println(rolldice)
+}
+//class Dice(): int { //Error. Return is on function not class
+class Dice(){
+    var dicesides = 6
+   //Error! fun roll:int(){//int must start with capital , Int
+    //Error! fun roll:Int(){//must use brackets after fuction
+    fun roll(): Int{
+        var diceroll = (1..12).random()
+        //println()
+        return diceroll
+    }
+}
+//Yay!We did it! W ewill rewrite again!
+
