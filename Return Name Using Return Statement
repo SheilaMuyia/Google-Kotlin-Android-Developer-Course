@@ -1,0 +1,16 @@
+//Using function to return statement instead of class
+fun main(){
+    println("Hello Kotlin")
+    println(Dice().sides)
+    println (Dice().roll())
+}
+class Dice(){
+    //sides
+    var sides = 6
+    
+    //print random number to roll with shorter code. Using return statement
+    fun roll():String{
+        var randomNumber = "Sheila"
+        return randomNumber
+    }
+}
