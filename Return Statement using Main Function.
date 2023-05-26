@@ -1,0 +1,44 @@
+I tried to do a return statement using the min function. Errors! It treated is a regular function. Coding is fun!
+//Return a dice roll value
+//Kotlin uses return statement 
+fun main():Int{
+    var dicesides = 6
+    return dicesides
+}
+
+//class Roll()
+
+//Let's try adding a main function 
+Two main functions. program refused. Main can only be one. Syas function overload: 
+
+
+Conflicting overloads: public fun main(): Int defined in root package in file File.kt, public fun main(): Unit defined in root package in file File.kt
+Conflicting overloads: public fun main(): Int defined in root package in file File.kt, public fun main(): Unit defined in root package in file File.kt
+
+//
+//Kotlin uses return statement 
+fun Roll():Int{
+    var dicesides = 6
+    return dicesides
+}
+
+//class Roll()
+
+fun main(){
+    
+}
+
+//
+//fun Roll:Int(){
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Code Failure 
+
+fun main(){
+    println("Hello Return Statement")
+    ReturnFunction().a
+}
+
+class ReturnFunction:Int(){
+    var a = println("Code to return a function")
+    return a;
+}
