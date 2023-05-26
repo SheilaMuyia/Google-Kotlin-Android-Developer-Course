@@ -1,0 +1,24 @@
+//Been a while. 
+// Creating a Dice Roll offhead using Classes Only
+
+fun main() {
+    println("Hello, world!")
+    var a = Dice()
+    println( "Your dice has" + " " + a.sides + "sides")
+    var b = println (Roll().a)
+    println ("It rolled" + Roll().a + "times")
+}
+
+class Dice(){
+    var sides = 6
+}
+//Make the dice roll
+// number of n times
+
+class Roll(){
+    var roll = 1..6
+    var a = roll.random()
+    
+}
+
+//Tried Prime numbers with Kotlin. It was very very hard
