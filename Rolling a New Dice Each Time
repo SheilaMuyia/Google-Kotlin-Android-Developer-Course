@@ -1,0 +1,18 @@
+fun main() {
+    println("Hello New Dice Instances!")
+    var firstdice =  Dice(6).roll()
+    var seconddice = Dice(7).roll()
+    println (" Your 6 sided dice rolled $firstdice times")
+    println (" Your 5 sided dice rolled $seconddice times")
+}
+//In real life you create object instance for  Dice Class
+//Modify the Dice class definition to accept an integer called numSides
+//fix the range using numSides
+class Dice(var numSides:Int){
+    fun roll():Int{
+        val randomNumber = (1..numSides).random()
+        return randomNumber
+    }
+}
+
+//Will revisit. Didn't really understand the code
